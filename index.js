@@ -38,7 +38,7 @@ app.get("/v1/events", async(re1, res)=>{
     }
 })
 
-app.get("/v1/events/:id", async(re1, res)=>{
+app.get("/v1/events/:id", async(req, res)=>{
     try {
         const event=await Event.findById(req.params.id);
         if(!event){
